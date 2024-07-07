@@ -1,5 +1,7 @@
 package com.skilldistillery.jets;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JetsApp {
@@ -42,12 +44,16 @@ public class JetsApp {
 				airfield.flyAllJets();
 				break;
 			case 3:
+				airfield.fastestJet();
 				break;
 			case 4:
+				airfield.jetRange();
 				break;
 			case 5:
+				airfield.loadingCargo();
 				break;
 			case 6:
+				airfield.RefuelingJets();
 				break;
 			case 7:
 
@@ -100,6 +106,25 @@ public class JetsApp {
 				}
 				break;
 			case 8:
+				airfield.jetMenu();
+				ArrayList<Jet> jetArray = airfield.getJets();
+
+				if (jetArray.size() <= 0) {
+					System.out.println("All of the jets are removed");
+					break;
+				}
+
+				System.out.println("Select a jet to remove (enter the number corresponding to the jet):");
+				int jetToRemove = kb.nextInt() - 1;
+
+				if (jetToRemove > jetArray.size() - 1 || jetToRemove < -1) {
+					System.out.println("The selected number is not in range");
+					kb.nextLine();
+
+				}
+				jetArray.remove(jetToRemove);
+				System.out.println(jetArray.get(jetToRemove) + " has been removed from the fleet.");
+
 				break;
 			case 9:
 				System.out.println("Exiting Jet Action Menu");

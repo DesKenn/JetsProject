@@ -10,10 +10,12 @@ public class CargoJet extends Jet implements CargoCarrier {
 		setPrice(price);
 
 	}
+	
 
 	@Override
 	public void loadCargo() {
-		System.out.println("The " + getModel() + " is now loading cargo.");
+
+		
 	}
 
 	@Override
