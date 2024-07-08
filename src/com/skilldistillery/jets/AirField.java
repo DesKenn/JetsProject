@@ -114,7 +114,7 @@ public class AirField {
 	public void jetMenu() {
         System.out.println("Jet Fleet:");
         for (int i = 0; i < jets.size(); i++) {
-            System.out.println((i + 1) + ". " + jets.get(i).getModel());
+            System.out.println((i ) + ". " + jets.get(i).getModel());
         }
 
 	}

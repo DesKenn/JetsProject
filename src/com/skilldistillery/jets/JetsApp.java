@@ -115,7 +115,7 @@ public class JetsApp {
 				}
 
 				System.out.println("Select a jet to remove (enter the number corresponding to the jet):");
-				int jetToRemove = kb.nextInt() - 1;
+				int jetToRemove =  kb.nextInt()- 1 ;
 
 				if (jetToRemove > jetArray.size() - 1 || jetToRemove < -1) {
 					System.out.println("The selected number is not in range");
